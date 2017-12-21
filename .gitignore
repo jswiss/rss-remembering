@@ -1,0 +1,6 @@
+variables.env
+node_modules
+/haters
+.DS_Store
+Icon
+*.log
