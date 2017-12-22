@@ -2,9 +2,14 @@
   "name": "rss-remembering",
   "version": "1.0.0",
   "description": "website tracking those we lost in South Sudan",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./start.js",
+    "watch": "nodemon ./start.js --ignore public/",
+    "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
+    "assets": "webpack -w --display-max-modules 0",
+    "sample": "node ./data/load-sample-data.js",
+    "blowitallaway": "node ./data/load-sample-data.js --delete"
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,7 @@
     "url": "https://github.com/jswiss/rss-remembering/issues"
   },
   "homepage": "https://github.com/jswiss/rss-remembering#readme",
+  "browserslist": "last 2 versions",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
