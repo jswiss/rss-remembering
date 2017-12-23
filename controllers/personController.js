@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const Store = mongoose.model('Store');
-const User = mongoose.model('User');
+const Person = mongoose.model('Person');
+// const User = mongoose.model('User');
 const multer = require('multer');
 const jimp = require('jimp');
 const uuid = require('uuid');
@@ -45,16 +45,16 @@ exports.resize = async (req, res, next) => {
 };
 
 exports.getPeople = async (req, res) => {
-  const peoplePromise = Person.find()
-    .skip(skip)
-    .limit(limit)
-    .sort({ created: 'desc' });
+  // const peoplePromise = Person.find()
+  //   .skip(skip)
+  //   .limit(limit)
+  //   .sort({ created: 'desc' });
 
   // Fires off both queries at same time, awaits the return of them together (bc one may take longer ??
   // than the other)
-  const people = await Promise.all(peoplePromise);
-  res.render('people', {
-    title: 'People',
+  // const people = await Promise.all(peoplePromise);
+  res.render('names', {
+    title: 'Names',
 
   });
 }
