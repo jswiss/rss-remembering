@@ -58,9 +58,7 @@
     .nav__link:hover, .nav__link--active {
       border-bottom-color: rgba(0, 0, 0, 0.2);
       border-right-color: rgba(0, 0, 0, 0.05);
-      background: -webkit-gradient(linear, left top, right top, from(#48ded4), color-stop(20%, #a026bf), color-stop(60%, #e82c75), color-stop(85%, #FFC40E), color-stop(95%, #48ded4)) fixed;
-      background: -o-linear-gradient(left, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%) fixed;
-      background: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%) fixed; }
+      background: #F2D796 85% fixed; }
       .nav__link:hover svg, .nav__link--active svg {
         -webkit-transform: scale(1.2);
             -ms-transform: scale(1.2);
