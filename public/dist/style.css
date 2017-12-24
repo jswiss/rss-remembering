@@ -1,4 +1,23 @@
 @charset "UTF-8";
+html {
+  font-size: 10px; }
+
+body {
+  background: #262161;
+  background: #efefef; }
+  body:before {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 100%; }
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto; }
+  @media all and (max-width: 900px) {
+    .inner {
+      padding: 2rem; } }
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,5 +138,32 @@
   .heart-count:before {
     content: '\2665\FE0F';
     margin-right: 1rem; } }
+
+.search {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .search__results {
+    background: white;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 5; }
+  .search__input {
+    font-size: 30px;
+    background: none;
+    color: white;
+    outline: 0;
+    border: 0; }
+  .search__result {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #ececec; }
+    .search__result--active {
+      background: #f1f1f1; }
 
 /*# sourceMappingURL=style.css.map*/
