@@ -1,0 +1,10 @@
+mixin nameCard(name = {})
+  .name
+    .name__hero
+      .name__actions
+
+      //- img(src=`/uploads/${store.photo || 'name.png'}`)
+      h2.title
+        a(href=`/name/${name.slug}`) #{name.name}
+    .name__details
+      p= name.description.split(' ').slice(0, 25).join(' ')
