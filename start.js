@@ -25,7 +25,7 @@ mongoose
   });
 
 // READY?! Let's go! import all of our models
-require('./models/Person');
+require('./models/Name');
 require('./models/Grave');
 // require('./models/User');
 
