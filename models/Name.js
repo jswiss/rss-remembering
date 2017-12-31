@@ -12,25 +12,25 @@ const nameSchema = new mongoose.Schema({
   slug: String,
   status: {
     type: String,
-    required: 'Every person must be either deceased or missing',
+    // required: 'Every person must be either deceased or missing',
     trim: true,
-    enum: ['deceased', 'missing']
+    // enum: ['deceased', 'missing']
   },
   incidentCategory: {
     type: String,
     trim: true,
-    required: 'Please choose an incident category',
-    enum: ['December 2013', '1983 - 2005', '1955 - 1972', 'community violence', 'electoral violence', 'other violence']
+    // required: 'Please choose an incident category',
+    // enum: ['December 2013', '1983 - 2005', '1955 - 1972', 'community violence', 'electoral violence', 'other violence']
   },
   witness: {
-    type: String,
-    required: 'Whether the body has been withnessed is required',
-    enum: ['yes', 'no']
+    type: Boolean,
+    // required: 'Whether the body has been withnessed is required',
+    // enum: ['yes', 'no']
   },
   sex: {
     type: String,
-    required: 'sex is required',
-    enum: ['male', 'female']
+    // required: 'sex is required',
+    // enum: ['male', 'female']
   },
   infant: Boolean,
   age: Number,
@@ -41,7 +41,9 @@ const nameSchema = new mongoose.Schema({
   },
   maritalStatus: {
     type: String,
-    enum: ['married', 'single', 'separated', 'widowed']
+    trim: true,
+    lowercase: true,
+    // enum: ['married', 'single', 'separated', 'widowed']
   },
   originLocation: {
     // TODO: add enums to protect data integrity here
@@ -52,12 +54,12 @@ const nameSchema = new mongoose.Schema({
   },
   nationality: {
     type: String,
-    enum: ['South Sudanese', 'other']
+    // enum: ['South Sudanese', 'other']
   },
   otherNationality: String,
   military: {
     type: String,
-    enum: ['civilian', 'military/militia']
+    // enum: ['civilian', 'military/militia']
   },
   // TODO: fix this so it only shows combatDeath if military is military/militia
   combatDeath: Boolean,
@@ -79,7 +81,7 @@ const nameSchema = new mongoose.Schema({
       { type: Number }
     ]
   },
-  othersWithInformation: [{
+  othersWithInformation: {
     name: String,
     phone: {
       type: String,
@@ -89,11 +91,11 @@ const nameSchema = new mongoose.Schema({
       type: String,
       trim: true,
       lowercase: true,
-      validate: [validateEmail, 'Please fill in a valid email address'],
-      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+      // validate: [validateEmail, 'Please fill in a valid email address'],
+      // match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
-  }],
-  nextOfKin: [{
+  },
+  nextOfKin: {
     name: String,
     telephone: {
       type: String,
@@ -103,14 +105,14 @@ const nameSchema = new mongoose.Schema({
       type: String,
       trim: true,
       lowercase: true,
-      validate: [validateEmail, 'Please fill in a valid email address'],
-      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+      // validate: [validateEmail, 'Please fill in a valid email address'],
+      // match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
-  }],
+  },
   informer: {
     name: {
       type: String,
-      required: true,
+      // required: true,
       trim: true,
     },
     telephone: {
@@ -121,12 +123,12 @@ const nameSchema = new mongoose.Schema({
       type: String,
       trim: true,
       lowercase: true,
-      validate: [validateEmail, 'Please fill in a valid email address'],
-      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+      // validate: [validateEmail, 'Please fill in a valid email address'],
+      // match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
     relationship: {
       type: String,
-      required: true,
+      // required: true,
       trim: true,
     }
   }
