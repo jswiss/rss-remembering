@@ -7,4 +7,4 @@ mixin nameCard(name = {})
       h2.title
         a(href=`/name/${name.slug}`) #{name.name}
     .name__details
-      //- p= name.description.split(' ').slice(0, 25).join(' ')
+      p= name.incidentDescription.split(' ').slice(0, 25).join(' ')
