@@ -45,16 +45,14 @@ exports.resize = async (req, res, next) => {
 };
 
 exports.getNames = async (req, res) => {
-  // const peoplePromise = Name.find()
-  //   .skip(skip)
-  //   .limit(limit)
-  //   .sort({ created: 'desc' });
+  const namesPromise = Name.find();
+  // .sort({ created: 'desc' });
 
   // Fires off both queries at same time, awaits the return of them together (bc one may take longer ??
   // than the other)
-  // const people = await Promise.all(peoplePromise);
+  const [names] = await Promise.all([namesPromise]);
   res.render('names', {
     title: 'Names',
-
+    names
   });
 }
