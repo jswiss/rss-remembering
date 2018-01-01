@@ -6,7 +6,7 @@ include mixins/_nameCard
 block content
   .inner
     h2= title
-    .name
+    .names
       each name in names
         +nameCard(name)
     //- +pagination(page, pages, count)
