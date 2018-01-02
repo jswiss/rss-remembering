@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const personController = require('../controllers/personController');
+const nameController = require('../controllers/nameController');
 const graveController = require('../controllers/graveController');
 
 const { catchErrors } = require('../handlers/errorHandlers');
 
-router.get('/', catchErrors(personController.getPeople));
+router.get('/', catchErrors(nameController.getNames));
 
 module.exports = router;

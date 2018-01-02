@@ -1,5 +1,12 @@
 extends layout
 
+include mixins/_nameCard
+//- include mixins/_pagination
+
 block content
   .inner
     h2= title
+    .names
+      each name in names
+        +nameCard(name)
+    //- +pagination(page, pages, count)

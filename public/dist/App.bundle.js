@@ -963,15 +963,15 @@ var _map2 = _interopRequireDefault(_map);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-autocomplete((0, _bling.$)('#address'), (0, _bling.$)('#lat'), (0, _bling.$)('#lng'));
+// autocomplete($('#address'), $('#lat'), $('#lng'));
 
-typeAhead((0, _bling.$)('.search'));
+// typeAhead($('.search'));
 
 (0, _map2.default)((0, _bling.$)('#map'));
 
 // $$ from bling.js allows you to select multiple elements without having to loop over them a la jQuery
-var heartForms = (0, _bling.$$)('form.heart');
-heartForms.on('submit', ajaxHeart);
+// const heartForms = $$('form.heart');
+// heartForms.on('submit', ajaxHeart);
 
 /***/ }),
 /* 10 */

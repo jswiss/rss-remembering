@@ -25,13 +25,13 @@ mongoose
   });
 
 // READY?! Let's go! import all of our models
-require('./models/Person');
+require('./models/Name');
 require('./models/Grave');
 // require('./models/User');
 
 // Start our app!
 const app = require('./app');
-app.set('port', process.env.PORT || 7575);
+app.set('port', process.env.PORT || 5555);
 const server = app.listen(app.get('port'), () => {
   console.log(`Express running → PORT ${server.address().port}`);
 });
