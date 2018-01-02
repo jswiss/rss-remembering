@@ -49,11 +49,8 @@ exports.getNames = async (req, res) => {
   // const limit = 6;
   // const skip = page * limit - limit;
 
-  const namesPromise = Name.find();
-
   // Fires off both queries at same time, awaits the return of them together (bc one may take longer ??
   // than the other)
-  const [names] = await Promise.all([namesPromise]);
   const namesPromise = Name.find();
   // .skip(skip)
   // .limit(limit)
@@ -69,11 +66,11 @@ exports.getNames = async (req, res) => {
 }
 
 exports.loadTable = async (req, res) => {
-  const namesPromise = Name.find();
+  const tablePromise = Name.find();
 
-  const [names] = await Promise.all([namesPromise]);
-  res.render('names', {
-    title: 'Names',
-    names
+  const [table] = await Promise.all([tablePromise]);
+  res.render('table', {
+    title: 'Table',
+    table
   });
 }
