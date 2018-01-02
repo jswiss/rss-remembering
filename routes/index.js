@@ -8,4 +8,6 @@ const { catchErrors } = require('../handlers/errorHandlers');
 
 router.get('/', catchErrors(nameController.getNames));
 
+router.get('/table', catchErrors(nameController.loadTable));
+
 module.exports = router;
