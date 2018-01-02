@@ -179,7 +179,7 @@ body {
 .name {
   background: white;
   margin: 10px 0;
-  width: 30%;
+  width: 23%;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05); }
   .name--wide {
@@ -218,7 +218,7 @@ body {
 .name__action {
   font-size: 10px; }
   .name__action svg {
-    width: 25px;
+    width: 23%;
     fill: white; }
   .name__action--edit a {
     border-bottom: 0; }
@@ -235,8 +235,6 @@ body {
     width: 100%;
     top: 0;
     right: 0;
-    background: -o-linear-gradient(45deg, #05b3d6 0%, rgba(5, 179, 214, 0) 70%), -o-linear-gradient(315deg, #0958ec 10%, rgba(9, 88, 236, 0) 80%), -o-linear-gradient(225deg, #d209ec 10%, rgba(210, 9, 236, 0) 80%), -o-linear-gradient(135deg, #05e129 100%, rgba(5, 225, 41, 0) 70%);
-    background: linear-gradient(45deg, #05b3d6 0%, rgba(5, 179, 214, 0) 70%), linear-gradient(135deg, #0958ec 10%, rgba(9, 88, 236, 0) 80%), linear-gradient(225deg, #d209ec 10%, rgba(210, 9, 236, 0) 80%), linear-gradient(315deg, #05e129 100%, rgba(5, 225, 41, 0) 70%);
     opacity: 0.6;
     z-index: 1;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
@@ -326,9 +324,6 @@ p {
   font-size: 40px;
   z-index: 2;
   line-height: 1.1;
-  -webkit-transform: skew(0, -3deg);
-      -ms-transform: skew(0, -3deg);
-          transform: skew(0, -3deg);
   line-height: 1.1; }
   .title--long {
     font-size: 30px; }
@@ -345,10 +340,7 @@ p {
         -ms-transform: skew(-5deg);
             transform: skew(-5deg); }
   .title a {
-    border-bottom: 0;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, rgba(242, 215, 150, 0.8)), color-stop(50%, rgba(242, 215, 150, 0.8)));
-    background-image: -o-linear-gradient(left, rgba(242, 215, 150, 0.8) 100%, rgba(242, 215, 150, 0.8) 50%);
-    background-image: linear-gradient(to right, rgba(242, 215, 150, 0.8) 100%, rgba(242, 215, 150, 0.8) 50%); }
+    border-bottom: 0; }
 
 .title--single {
   max-width: 600px;
