@@ -56,3 +56,13 @@ exports.getNames = async (req, res) => {
     names
   });
 }
+
+exports.getTable = async (req, res) => {
+  const namesPromise = Name.find();
+
+  const [names] = await Promise.all([namesPromise]);
+  res.render('table', {
+    title: 'Table',
+    names,
+  });
+}
